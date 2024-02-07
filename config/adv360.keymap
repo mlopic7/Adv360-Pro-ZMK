@@ -31,6 +31,22 @@
         };
     };
 
+    combos {
+        compatible = "zmk,combos";
+
+        Rebind_Cmd-Left {
+            bindings = <&kp LA(LEFT)>;
+            key-positions = <35 63>;
+            layers = <2>;
+        };
+
+        Rebind_Ctrl-Right {
+            bindings = <&kp LA(RIGHT)>;
+            key-positions = <63 36>;
+            layers = <2>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
