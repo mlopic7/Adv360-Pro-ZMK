@@ -62,11 +62,11 @@
 
         layer_qwertytodvorak {
             bindings = <
-&kp EQUAL  &trans  &trans  &trans  &trans  &trans  &trans                                      &trans  &trans  &trans  &trans  &trans            &trans             &trans
-&trans     &trans  &trans  &trans  &trans  &trans  &trans                                      &trans  &trans  &trans  &trans  &trans            &trans             &kp FSLH
-&trans     &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans  &trans            &trans             &trans
-&trans     &trans  &trans  &trans  &trans  &trans                  &trans      &trans                  &trans  &trans  &trans  &trans            &trans             &trans
-&trans     &trans  &trans  &trans  &trans          &trans  &trans  &trans      &trans  &trans  &trans          &trans  &trans  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &trans
+&kp FSLH  &trans  &trans  &trans  &trans  &trans  &trans                                      &trans  &trans  &trans  &trans  &trans    &trans  &trans
+&trans    &trans  &trans  &trans  &trans  &trans  &trans                                      &trans  &trans  &trans  &trans  &trans    &trans  &kp EQUAL
+&trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans
+&trans    &trans  &trans  &trans  &trans  &trans                  &trans      &trans                  &trans  &trans  &trans  &trans    &trans  &trans
+&trans    &trans  &trans  &trans  &trans          &trans  &trans  &trans      &trans  &trans  &trans          &trans  &trans  &kp RBKT  &kp Z   &trans
             >;
         };
 
