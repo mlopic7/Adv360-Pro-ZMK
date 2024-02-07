@@ -13,6 +13,7 @@
 #include <dt-bindings/zmk/backlight.h>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/rgb.h>
 
 / {
@@ -29,23 +30,27 @@
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
-    };
 
-    combos {
-        compatible = "zmk,combos";
+        modmorph_next_word_mac: modmorph_next_word_mac {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MODMORPH_NEXT_WORD_MAC";
+            bindings = <&kt RIGHT>, <&kp RA(RIGHT)>;
 
-        Rebind_Cmd-Left {
-            bindings = <&kp LA(LEFT)>;
-            key-positions = <35 63>;
-            layers = <3>;
+            #binding-cells = <0>;
+            mods = <(MOD_LGUI|MOD_RGUI)>;
         };
 
-        Rebind_Ctrl-Right {
-            bindings = <&kp LA(RIGHT)>;
-            key-positions = <63 36>;
-            layers = <3>;
+        modmorph_prev_word_mac: modmorph_prev_word_mac {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MODMORPH_PREV_WORD_MAC";
+            bindings = <&kt LEFT>, <&kt LA(LEFT)>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LGUI|MOD_RGUI)>;
         };
     };
+
+    combos { compatible = "zmk,combos"; };
 
     keymap {
         compatible = "zmk,keymap";
@@ -82,11 +87,11 @@
 
         macos_tweaks {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans                                                        &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &kp LC(UP_ARROW)                                              &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans            &kp LGUI   &trans      &kp LALT  &kp RCTRL  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                               &trans      &trans                       &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans          &trans            &kp LCTRL  &trans      &trans    &trans     &trans          &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans                   &trans                   &trans  &trans                                                        &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans                   &trans                   &trans  &kp LC(UP_ARROW)                                              &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans                   &trans                   &trans  &trans            &kp LGUI   &trans      &kp LALT  &kp RCTRL  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans                   &trans                   &trans                               &trans      &trans                       &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &modmorph_prev_word_mac  &modmorph_next_word_mac          &trans            &kp LCTRL  &trans      &trans    &trans     &trans          &trans  &trans  &trans  &trans  &trans
             >;
         };
 
