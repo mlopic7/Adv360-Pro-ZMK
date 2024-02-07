@@ -51,6 +51,29 @@
 
     combos { compatible = "zmk,combos"; };
 
+    macros {
+        start_mac_profile: start_mac_profile {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&bt BT_SEL 0 &to 1 &tog 3>;
+            label = "START_MAC_PROFILE";
+        };
+
+        start_phone_profile: start_phone_profile {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&bt BT_SEL 1 &to 1>;
+            label = "START_PHONE_PROFILE";
+        };
+
+        to_hardwired_profile: to_hardwired_profile {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&bt BT_SEL 4 &to 2>;
+            label = "TO_HARDWIRED_PROFILE";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -116,11 +139,11 @@
 
         layer_mod {
             bindings = <
-&none  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &none                                                  &trans                  &none  &none       &none       &none  &none  &none
-&none  &to 0         &to 1         &none         &none         &none         &bootloader                                            &bootloader             &none  &none       &none       &none  &none  &none
-&none  &none         &none         &to 2         &none         &none         &none        &none  &none      &bt BT_CLR  &none       &rgb_ug RGB_MEFS_CMD 5  &none  &none       &none       &none  &none  &none
-&none  &none         &none         &none         &macro_ver    &none                             &none      &none                                           &none  &tog 3      &none       &none  &none  &none
-&none  &none         &none         &none         &none                       &none        &none  &none      &none       &bl BL_TOG  &rgb_ug RGB_TOG                &bl BL_INC  &bl BL_DEC  &none  &none  &none
+&none  &start_mac_profile  &start_phone_profile  &bt BT_SEL 2  &bt BT_SEL 3  &to_hardwired_profile  &none                                                  &trans                  &none  &none       &none       &none  &none  &none
+&none  &to 0               &to 1                 &none         &none         &none                  &bootloader                                            &bootloader             &none  &none       &none       &none  &none  &none
+&none  &none               &none                 &to 2         &none         &none                  &none        &none  &none      &bt BT_CLR  &none       &rgb_ug RGB_MEFS_CMD 5  &none  &none       &none       &none  &none  &none
+&none  &none               &none                 &none         &macro_ver    &none                                      &none      &none                                           &none  &tog 3      &none       &none  &none  &none
+&none  &none               &none                 &none         &none                                &none        &none  &none      &none       &bl BL_TOG  &rgb_ug RGB_TOG                &bl BL_INC  &bl BL_DEC  &none  &none  &none
             >;
         };
     };
