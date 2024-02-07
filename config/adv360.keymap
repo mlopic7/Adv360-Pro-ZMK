@@ -123,7 +123,7 @@
 &trans  &trans  &trans  &trans                   &trans                   &trans  &kp LC(UP_ARROW)                                              &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans                   &trans                   &trans  &trans            &kp LGUI   &trans      &kp LALT  &kp RCTRL  &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans                   &trans                   &trans                               &trans      &trans                       &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &gresc  &trans  &modmorph_prev_word_mac  &modmorph_next_word_mac          &trans            &kp LCTRL  &trans      &trans    &trans     &trans          &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &modmorph_prev_word_mac  &modmorph_next_word_mac          &trans            &kp LCTRL  &trans      &trans    &trans     &trans          &trans  &trans  &trans  &trans  &trans
             >;
         };
 
