@@ -55,21 +55,21 @@
         start_mac_profile: start_mac_profile {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&bt BT_SEL 0 &to 1 &tog 4>;
+            bindings = <&bt BT_SEL 0 &to 1 &tog 4 &bt BT_DISC 1>;
             label = "START_MAC_PROFILE";
         };
 
         start_phone_profile: start_phone_profile {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&bt BT_SEL 1 &to 2>;
+            bindings = <&bt BT_SEL 1 &to 2 &bt BT_DISC 0>;
             label = "START_PHONE_PROFILE";
         };
 
         to_hardwired_profile: to_hardwired_profile {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&bt BT_SEL 4 &to 1 &tog 4>;
+            bindings = <&bt BT_SEL 4 &to 1 &tog 4 &bt BT_DISC 1 &bt BT_DISC 0>;
             label = "TO_HARDWIRED_PROFILE";
         };
     };
