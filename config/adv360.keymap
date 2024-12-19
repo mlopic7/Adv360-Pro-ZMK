@@ -101,11 +101,11 @@
 
         macos_tweaks {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans                                                          &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &kp LC(UP_ARROW)                                                &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans            &kp LGUI  &kp LCTRL      &kp LALT  &kp RCTRL  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                              &trans         &trans                       &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans          &trans            &kp LALT  &trans         &trans    &trans     &trans          &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans                                                                  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &kp LC(UP_ARROW)                                                        &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans            &kp LGUI  &kp LCTRL      &kp LALT  &kp RIGHT_COMMAND  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                              &trans         &trans                               &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans          &trans            &kp LALT  &trans         &trans    &trans             &trans          &trans  &trans  &trans  &trans  &trans
             >;
         };
 
